@@ -1,0 +1,196 @@
+.App {
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+background-color: #e4e4e4;
+}
+
+
+/* -------   */
+.firstHalf {
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  padding: 18px;
+ border-radius: 4px;
+ background: white;
+ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+ margin-bottom: 50px;
+}
+.buttonGroup .start , .buttonGroup .stop{
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.firstHalf h1,
+.firstHalf h2 {
+  text-align: left;
+  /* padding-left: 50px; */
+}
+
+
+.speechToTextText {
+  width: 90%;
+  text-align: center;
+}
+
+.secondHalf {
+  max-width: 800px;
+  width: 100%;
+  border: 1px solid rgb(201, 201, 201);
+  padding: 18px;
+ border-radius: 4px;
+ background: white;
+ box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+ margin: auto;
+
+}
+.secondHalf h1,
+.secondHalf h2 {
+  text-align: left;
+
+}
+
+.secondHalf .textArea {
+   background-color: white;
+  border: 1px solid rgb(165, 165, 165);
+  outline: none;
+  padding: 10px;
+  border-radius: 4px;
+  height: 50px;
+  font-size: 1rem;
+  display: block;
+  width: 97%;
+  margin-bottom: 20px;
+}
+.text-div span{
+  display: block;
+  text-align: left;
+  margin-bottom: 8px;
+  color:#686868;
+}
+.audio{
+  display: flex;
+}
+.audioControl {
+
+  width: 100%;
+}
+
+.convert{
+  border: 0;
+  border-radius: 50px;
+  font-size: 17px;
+  padding: 15px 35px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+
+.convert:hover{
+  background-color: slategrey;
+  color: #fff;
+}
+
+@keyframes quiet {
+  25%{
+    transform: scaleY(.6);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.8);
+  }
+}
+
+@keyframes normal {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(.6);
+  }
+}
+@keyframes loud {
+  25%{
+    transform: scaleY(1);
+  }
+  50%{
+    transform: scaleY(.4);
+  }
+  75%{
+    transform: scaleY(1.2);
+  }
+}
+body{
+  display: flex;
+  justify-content: center;
+  background: black;
+  margin: 0;padding: 0;
+  align-items: center;
+  height: 100vh;
+}
+
+.boxContainer{
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  --boxSize: 6px;
+  --gutter: 4px;
+  width: calc((var(--boxSize) + var(--gutter)) * 5);
+  margin-bottom: 20px;
+}
+.audio-react-recorder{
+  display: none;
+}
+.box{
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: rgb(211,55,55);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+}
+
+.boxAfter{
+  transform: scaleY(.4);
+  height: 100%;
+  width: var(--boxSize);
+  background: rgb(85,214,54);
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  border-radius: 8px;
+} 
+
+.box1{
+  animation-name: quiet;
+}
+
+.box2{
+  animation-name: normal;
+}
+
+.box3{
+  animation-name: quiet;
+}
+
+.box4{
+  animation-name: loud;
+}
+
+.box5{
+  animation-name: quiet;
+}
